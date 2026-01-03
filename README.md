@@ -1,73 +1,44 @@
-# React + TypeScript + Vite
+# Amazon Cameroon | Premium WhatsApp Advertising Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, high-conversion landing page designed for **Amazon Cameroon**, an elite advertising network that bridges the gap between local vendors and thousands of digital shoppers via specialized WhatsApp channels.
 
-Currently, two official plugins are available:
+## 🚀 Key Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Elite UI/UX**: Inspired by global brands like Nike, featuring a minimalist Black & Green (#25D366) color palette, bold typography, and premium spacing.
+- **AI Ad Suggestion**: Integrated with **Google Gemini API** to automatically generate persuasive, bilingual (English/French) ad copy for business owners.
+- **WhatsApp Integration**: High-conversion forms that redirect users directly to a professional WhatsApp business thread (+250798971739) with pre-filled business data.
+- **Modern Animations**: Smooth scroll reveals and interactive elements powered by **Framer Motion**.
+- **Fully Responsive**: Optimized for every screen size, from mobile devices used by street vendors to desktop monitors used by agency owners.
+- **Performance Focused**: Built with Vite and ES6 modules for ultra-fast loading times.
 
-## React Compiler
+## 🛠 Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework**: React 19 (JSX)
+- **Styling**: Tailwind CSS
+- **Icons**: Lucide React
+- **Animations**: Framer Motion
+- **AI Integration**: @google/genai (Gemini 3 Flash Preview)
+- **Build Tool**: Vite
 
-## Expanding the ESLint configuration
+## 🎨 Brand Identity
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+The project adheres to a strict two-color visual system:
+- **Primary**: `#25D366` (WhatsApp Green) – Used for highlights, CTAs, and accents.
+- **Secondary**: `#000000` (Pitch Black) – Used for high-impact typography and backgrounds.
+- **Typography**: Plus Jakarta Sans (Main) & Space Grotesk (Display).
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📥 Setup Instructions
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+1. **Environment Variable**: Ensure you have access to a Google Gemini API Key. The application expects this in `process.env.API_KEY`.
+2. **Local Development**:
+   - Clone the repository.
+   - Run your development server using Vite.
+   - Ensure the `importmap` in `index.html` is correctly pointing to the ESM versions of the libraries.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📂 Project Structure
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- `App.tsx`: The main orchestration component.
+- `components/`: Modular UI sections (Hero, Stats, ValueProp, FeatureCards, Highlight, AdForm, Footer).
+- `index.html`: Main entry point with custom font configurations and import maps.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
