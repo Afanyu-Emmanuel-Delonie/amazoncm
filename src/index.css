@@ -1,0 +1,46 @@
+/* Add these styles to your index.html <style> section or create a global CSS file */
+
+/* Prevent horizontal overflow globally */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* Ensure all elements respect viewport width */
+* {
+  box-sizing: border-box;
+}
+
+/* Fix container overflow on mobile */
+.container {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Prevent text from causing overflow */
+h1, h2, h3, h4, h5, h6, p {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Fix tracking/letter-spacing causing overflow */
+@media (max-width: 768px) {
+  .tracking-tighter,
+  .tracking-tight,
+  .tracking-widest,
+  [class*="tracking-"] {
+    letter-spacing: 0.05em !important;
+  }
+}
+
+/* Ensure images don't overflow */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Fix framer-motion animations causing overflow */
+[style*="transform"] {
+  max-width: 100%;
+}
