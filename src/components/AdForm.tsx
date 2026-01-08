@@ -22,7 +22,7 @@ const AdForm: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const targetPhone = "250798971739";
+    const targetPhone = "237673834249";
     const adText = `*New Advertising Request*\n\n*Name:* ${formData.name}\n*Business:* ${formData.business}\n*WhatsApp:* ${formData.phone}\n*Product:* ${formData.product}\n\n*Proposed Ad Text:* ${formData.message}`;
     window.open(`https://wa.me/${targetPhone}?text=${encodeURIComponent(adText)}`, '_blank');
   };

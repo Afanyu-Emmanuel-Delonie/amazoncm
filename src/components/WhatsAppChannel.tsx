@@ -27,7 +27,8 @@ const WhatsAppChannel: React.FC = () => {
           </p>
           <div className="pt-4">
             <a 
-              href="https://whatsapp.com/channel/your-channel-link" 
+              href="https://whatsapp.com/channel/0029Vb5tqxH84Om3R88JcR14" 
+              target='_blank' 
               className="inline-flex items-center gap-3 bg-black text-white px-12 py-5 rounded-full font-black text-xs uppercase tracking-[0.2em] hover:bg-[#25D366] hover:text-black transition-all shadow-2xl shadow-black/10 group"
             >
               Join Channel
